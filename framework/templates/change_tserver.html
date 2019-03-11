@@ -1,0 +1,69 @@
+{% extends 'create_tserver.html' %}
+
+
+{% block title %}
+    <title>change</title>
+{% endblock title%}
+
+
+{% block change_content %}
+      <tr>
+          <form action="" method="post">
+              {% for mfw_server in mfw_server_obj %}}
+              <td><input type="text" name="app" value="{{ mfw_server.app }}"></td>
+              <td><input type="text" name="server" value="{{ mfw_server.server }}"></td>
+              <td><input type="text" name="division" value="{{ mfw_server.division }}"></td>
+              <td><input type="text" name="node" value="{{ mfw_server.node }}"></td>
+              <td><input type="text" name="status" value="{{ mfw_server.status }}"></td>
+              <td><input type="text" name="use_agent" value="{{ mfw_server.use_agent }}"></td>
+              <td><input type="submit"></td>
+              {% endfor %}
+          </form>
+      </tr>
+{% endblock change_content %}
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{##}
+{#<head>#}
+{#  <meta charset="UTF-8">#}
+{#  <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#  <title>change</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{#<h3>编辑</h3>#}
+{##}
+{#<div class="container">#}
+{#    <div class="row">#}
+{#        <div class="col-md-6 col-md-offset-3">#}
+{#            <form action="/app01/change/" method="post">#}
+{#                {% for mfw_server in mfw_server_obj %}#}
+{#                <div class="form-group">#}
+{#                    <label for="">NODE</label>#}
+{#                    <input type="text" name="node" class="form-control" value="{{ mfw_server.node }}">#}
+{#                </div>#}
+{##}
+{#                <div class="form-group">#}
+{#                    <label for="">SERVER</label>#}
+{#                    <input type="text" name="server" class="form-control" value="{{ mfw_server.server }}">#}
+{#                </div>#}
+{##}
+{#                <div class="form-group">#}
+{#                    <label for="">DIVISION</label>#}
+{#                    <input type="text" name="division" class="form-control" value="{{ mfw_server.division }}">#}
+{#                </div>#}
+{#                <input type="submit">#}
+{#                {% endfor %}#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#</div>#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#</body>#}
+{#</html>#}
